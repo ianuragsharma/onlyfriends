@@ -21,10 +21,12 @@ import { FaUserAlt, FaLock } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { loginHandler } from "features";
+import { useDocumentTitle } from "utils/useDocumentTitle";
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
 
 const Login = () => {
+  useDocumentTitle("Login");
   const [showPassword, setShowPassword] = useBoolean();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");

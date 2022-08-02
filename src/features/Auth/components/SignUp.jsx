@@ -22,11 +22,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { FaUserAlt, FaLock, FaUserCircle } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { signupHandler } from "features";
+import { useDocumentTitle } from "utils/useDocumentTitle";
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
 const CFMdEmail = chakra(MdEmail);
 const CDFaUserCircle = chakra(FaUserCircle);
 const SignUp = () => {
+  useDocumentTitle("Signup");
   const [showPassword, setShowPassword] = useBoolean();
   const [signupFromData, setSignupFromData] = useState({
     firstName: "",
