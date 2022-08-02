@@ -1,7 +1,15 @@
+import { Box } from "@chakra-ui/react";
+import { Navbar } from "components";
 import React from "react";
+import { useDocumentTitle } from "utils/useDocumentTitle";
 
 const HomePage = () => {
-  return <div>HomePage</div>;
+  useDocumentTitle("Home");
+  return (
+    <Box>
+      <Navbar />
+    </Box>
+  );
 };
 
 export { HomePage };
